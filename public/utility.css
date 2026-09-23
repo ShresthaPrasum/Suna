@@ -1,0 +1,30 @@
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-center{
+    align-items:center;
+}
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.svg{
+    height: 24px;
+    width: 24px;
+    filter: invert(1);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
