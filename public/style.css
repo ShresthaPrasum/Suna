@@ -8,7 +8,7 @@ body{
     display: flex;
     height: 100vh;
     flex-direction: column;
-    background-color: black;
+    background: #181818;
     color: white;
 }
 header{
