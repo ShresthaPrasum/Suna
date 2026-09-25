@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+header{
+    position: absolute;
+    height: 65px;
+    width: 100%;
+    background-color: black;
+    align-content: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.logo h2{
+    font-size: 28px;
+    cursor: pointer;
+}
+h1,h2,h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+#nav{
+    justify-content: space-between;
+}
