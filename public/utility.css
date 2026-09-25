@@ -5,6 +5,7 @@
     justify-content: center;
 }
 
+
 .flex-column{
     display: flex;
     flex-direction: column;
@@ -24,6 +25,12 @@
     width: 24px;
     filter: invert(1);
     padding: 12px;
+    border-radius: 50%;
+}
+.svg1{
+    height: 24px;
+    width: 24px;
+    filter: invert(1);
     border-radius: 50%;
 }
 

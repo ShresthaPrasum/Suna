@@ -1,86 +1,100 @@
 * {
-            padding: 0;
-            margin: 0;
-            font-family: "Google Sans", sans-serif;
-        }
+    padding: 0;
+    margin: 0;
+    font-family: "Google Sans", sans-serif;
+}
 
-        body{
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-            background-color: black;
-            color: white;
-        }
-        header{
-            position: absolute;
-            height: 65px;
-            width: 100%;
-            background-color: black;
-            align-content: center;
-        }
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+header{
+    position: absolute;
+    height: 65px;
+    width: 100%;
+    background-color: black;
+    align-content: center;
+}
 
-        h1,h2,h3{
-            font-family: 'Poppins', sans-serif;
-        }
+h1,h2,h3{
+    font-family: 'Poppins', sans-serif;
+}
 
-        .logo{
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        .logo img{
-            height: 50px;
-            width: 50px;
-            cursor: pointer;
-            margin-right: 7px;
-        }
-        .logo h2{
-            font-size: 28px;
-            cursor: pointer;
-        }
-        .middle-nav{
-            width: 40%;
-        }
-        .home{
-            background-color: #8080804c;
-        }
-        .search{
-            background-color: #8080804c;
-            border-radius: 25px;
-            width: 70%;
-            margin-left: 7px;
-        }
+.logo{
+    margin-left: 20px;
+    width: 33.33%;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+.logo h2{
+    font-size: 28px;
+    cursor: pointer;
+}
+.middle-nav{
+    width: 33.33%;
+    
+}
+.home{
+    background-color: #8080804c;
+}
+.search{
+    background-color: #8080804c;
+    border-radius: 25px;
+    width: 80%;
+    margin-left: 7px;
+}
 
-        .search input{
-            background-color: transparent;
-            border: none;
-            outline: none;
-            color: white;
-            width: 90%;
+.search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 90%;
 
-        }
-        #homesvg{
-            cursor: pointer;
-        }   
-        #search_svg{
-            cursor: pointer;
-        }
-        .user-nav{
-            display: flex;
-            align-items: left;
-            justify-content: left;
-        }
-        .user-nav a{
-            text-decoration: none;
-            display: inline-block;
-            color: black;
-            margin-right: 20px;
-            background-color: white;
-            border: none;
-            border-radius: 20px;
-            width: 100px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+}
+#homesvg{
+    cursor: pointer;
+}   
+#search_svg{
+    cursor: pointer;
+}
+.user-nav{
+    width: 33.33%;
+    gap: 20px;
+    
+}
+#muiz, #install{
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#install{
+    background-color: #8080804c;
+    color: white;
+}
+
+#account{
+    background-color: #1DB954;
+    color: black;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 30px;
+}
