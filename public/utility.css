@@ -5,6 +5,9 @@
     justify-content: center;
 }
 
+.justify-space{
+    justify-content: space-between;
+}
 
 .flex-column{
     display: flex;
@@ -32,6 +35,11 @@
     width: 24px;
     filter: invert(1);
     border-radius: 50%;
+}
+
+.bg-grey {
+    color: grey;
+    font-size: 14px;
 }
 
 
