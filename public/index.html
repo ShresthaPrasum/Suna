@@ -84,7 +84,7 @@
             gap: 20px;
             
         }
-        #muiz, #install{
+        #muiz{
             background-color: white;
             border-radius: 20px;
             cursor: pointer;
@@ -95,9 +95,15 @@
             font-size: 14px;
         }
 
-        #install{
-            background-color: #8080804c;
+        .grey-btn{
+            background-color: #80808049;
             color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
         }
 
         #account{
@@ -113,7 +119,7 @@
             margin-left: 30px;
         }
 
-        .music{
+        .main{
             height: 78vh;
             width: 100%;
             gap: 10px;
@@ -137,6 +143,9 @@
             flex: 1;
             background-color: #181818;
             border-radius: 8px;
+            flex-direction: column;
+            padding: 16px 42px;
+            overflow: auto;
         }
 
         .first-top h3{
@@ -203,6 +212,49 @@
             width: 50px;
             border-radius: 50%;
         }
+
+        #song-top{
+            gap: 10px;
+        }
+
+        #recommended{
+            flex-direction: column;
+            width: 100%;
+            row-gap: 20px;
+        }
+        #recommended h3{
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .musics{
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 180px;
+            height: 35vh;
+            overflow: auto;
+            gap: 20px;
+            scrollbar-width: none;
+        }
+
+        .music{
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            height: 180px;
+            width: 180px;
+            border-radius: 10px;
+            cursor: pointer;
+            padding-bottom: 20px;
+            position: relative;
+            
+        }
+
+        .music-cover{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 <body>
     <header>
@@ -220,7 +272,7 @@
             </div>
             <div class="user-nav flex item-center">
                 <a href="muiz.html" id="muiz">Explore Muiz</a>
-                <a href="https://github.com/ShresthaPrasum/Suna" id="install">Install app</a>
+                <a href="https://github.com/ShresthaPrasum/Suna" class="grey-btn">Install app</a>
                 <img src="Image/notification-bell-on-svgrepo-com.svg" class="svg1" alt="notificationbell">
                 <img src="Image/group-of-people-svgrepo-com.svg" class="svg1" alt="groupofpeople">
                 <h3 id="account">P</h3>
@@ -228,7 +280,7 @@
         </nav>
     </header>
     <main>
-        <div class="music flex">
+        <div class="main flex">
             <div class="library flex">
                 <div class="library-top flex item-center">
                     <div class="first-top">
@@ -249,32 +301,100 @@
                 </div>
                 <div class="singers flex">
                     <ul>
-                        <li class = "singer">
-                            <img src="Image/Cover/arctic-monkey.webp" alt="">
-                            <div class="discription">
+                        <li class = "singer" data-singer="arctic-monkey">
+                            <img src="Image/Cover/arctic-monkey.webp" alt="Arctic Monkeys">
+                            <div class="description">
                                 <h4>Artic Monkey</h4>
                                 <p class="bg-grey">Rock</p>
                             </div>
                         </li>
-                        <li class = "singer">
-                            <img src="Image/" alt="">
-                            <div class="discription">
+                        <li class = "singer" data-singer="lana-del-rey">
+                            <img src="Image/Cover/lana-del-rey.webp" alt="Lana Del Rey">
+                            <div class="description">
                                 <h4>Lana Del Rey</h4>
                                 <p class="bg-grey">Pop</p>
                             </div>
                         </li>
-                        <li class = "singer">
-                            <img src="Image/" alt="">
-                            <div class="discription">
+                        <li class = "singer" data-singer="kendrick-lamar">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="Kendrick Lamar">
+                            <div class="description">
                                 <h4>Kendrick Lamar</h4>
                                 <p class="bg-grey">Hip Hop</p>
+                            </div>
+                        </li>
+                        <li class = "singer" data-singer="yabesh-thapa">
+                            <img src="Image/Cover/yabesh-thapa.webp" alt="Yabesh Thapa">
+                            <div class="description">
+                                <h4>Yabesh Thapa</h4>
+                                <p class="bg-grey">Romantic</p>
+                            </div>
+                        </li>
+                        <li class = "singer" data-singer="nepali">
+                            <img src="Image/Cover/nepal-flag.webp" alt="nepali songs">
+                            <div class="description">
+                                <h4>Nepali Songs</h4>
+                                <p class="bg-grey">Nepali</p>
+                            </div>
+                        </li>
+                        <li class = "singer" data-singer="nepali">
+                            <img src="Image/Cover/nepal-flag.webp" alt="nepali songs">
+                            <div class="description">
+                                <h4>Nepali Songs</h4>
+                                <p class="bg-grey">Nepali</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="songs flex">
-
+                <div id="song-top" class="flex item-center">
+                    <h4 class="grey-btn">All</h4>
+                    <h4 class="grey-btn">Music</h4>
+                    <h4 class="grey-btn">Poadcasts</h4>
+                </div>
+                <div id="recommended" class="flex">
+                    <h3>Recommended</h3>
+                    <div class="musics" id="music-container">
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="recommended" class="flex">
+                    <h3>Popular Songs</h3>
+                    <div class="musics" id="music-container">
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                        <div class="music">
+                            <img src="Image/Cover/kendrick-lamar.webp" alt="" class="music-cover">
+                            <p id="song-name">I wanna Be yours</p>
+                            <p id="artist-name" class="bg-grey">Artic Monkey</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
         </div>
         <div class="info-control">

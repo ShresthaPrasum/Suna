@@ -18,4 +18,13 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             }
         })
     .catch(error=> console.error(error));
+
+    let artists = document.querySelectorAll('.singer');
+
+    artists.forEach((artist)=>{
+        artist.addEventListener('click', (e)=>{
+            console.log(artist.dataset.singer);
+        })
+    })
 })
+
