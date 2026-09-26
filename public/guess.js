@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(famous_lyric);
           const output = document.querySelector("#famos_lyric");
           const guess_output = document.querySelector("#guess_output");
+          document.querySelector('#guess').style.height = "285px";
           guess_output.style.display = "flex";
           output.style.display = "flex";
           output.innerHTML = `The famous lyric is, "<b>  ${famous_lyric}" </b>`;
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
        helo = 'lazy';
     }
     else if(lapsesong == true){
-     helo = 'lapse'
+     helo = 'lapse';
     }
     else{
         console.error('BRUH');
@@ -128,7 +129,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if(result.success){
             const req_song = result.req_song;
             const req_song_name = req_song.name;
-            console.log(req_song_name);
+            
+            const outpt = document.querySelector('#output_suggestion');
+            document.querySelector('#findmood').style.height = "716px";
+            outpt.style.display = "flex";
+            outpt.style.marginTop = "44px";
+            document.querySelector('#s_h2').innerText = `${req_song_name.toUpperCase()}`;
         }
     })
 
