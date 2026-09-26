@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const random_num = Math.floor(Math.random() * 1);
+    const random_num = Math.round(Math.random() * 3);
 
     fetch("/save", {
       method: "POST",
@@ -47,12 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
   
   formm.addEventListener("submit", (e)=>{
     e.preventDefault();
+
     const formdata = new FormData(formm);
     const vibes = formdata.get('vibes');
     const doing = formdata.get('doing');
+    const random_numm = Math.round(Math.random()*3);
+
     let lapsesong = false;
     let lazy = false;
     let freshing = false;
+
     if(doing==='Exercise'){
         lapsesong= true;
         lazy = false;
@@ -96,21 +100,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     
-
-    let helo;
+    let helo = "nothing"
     if(freshing == true){
-       helo = 'freshing';
+      helo = 'freshing';
     }
     else if (lazy == true){
-        helo = 'lazy';
+       helo = 'lazy';
     }
     else if(lapsesong == true){
-        helo = 'lapse'
+     helo = 'lapse'
     }
     else{
         console.error('BRUH');
     }
+    console.log(helo);
 
+    fetch('/savee',{
+        method: 'POST',
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify({
+            needed_song: helo,
+            random_numm: random_numm
+        })
+    })
+    .then(response=>response.json())
+    .then(result=>{
+        if(result.success){
+            const req_song = result.req_song;
+            const req_song_name = req_song.name;
+            console.log(req_song_name);
+        }
+    })
 
   })
 });
