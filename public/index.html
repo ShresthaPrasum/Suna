@@ -189,6 +189,28 @@
             filter: invert(0.5);
             border-radius: 50%;
         }
+        .singers{
+            overflow-y:scroll;
+        }
+        
+        ::-webkit-scrollbar {
+        width: 8px;
+          
+        }
+
+        ::-webkit-scrollbar-track {
+        background: #1e1e1e;
+        border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1d1f2064;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: #38d7ef;
+        }
 
         .singers ul{
             display: flex;
@@ -196,6 +218,7 @@
             row-gap: 15px;
             width: 100%;
             list-style: none;
+            
         }
 
         .singer{
@@ -336,11 +359,18 @@
                                 <p class="bg-grey">Nepali</p>
                             </div>
                         </li>
-                        <li class = "singer" data-singer="nepali">
-                            <img src="Image/Cover/nepal-flag.webp" alt="nepali songs">
+                        <li class = "singer" data-singer="imagine-dragons">
+                            <img src="Image/Cover/imagine-dragon.jpg" alt="Imagine Dragon">
                             <div class="description">
-                                <h4>Nepali Songs</h4>
-                                <p class="bg-grey">Nepali</p>
+                                <h4>Imagine Dragons</h4>
+                                <p class="bg-grey">Rock</p>
+                            </div>
+                        </li>
+                        <li class = "singer" data-singer="eminem">
+                            <img src="Image/Cover/eminem.jpg" alt="Eminem">
+                            <div class="description">
+                                <h4>Eminem</h4>
+                                <p class="bg-grey">Rock</p>
                             </div>
                         </li>
                     </ul>
