@@ -18,24 +18,30 @@
             <nav class="flex item-center" id="nav">
                 <div class="logo flex item-center">
                     <img src="Image/Screenshot 2026-09-23 200027.png" alt="logo-not-fetched">
-                    <h2>Muiz/guess</h2>
+                    <h2>Muiz</h2>
                 </div>
                 <div class="end-nav flex item-center">
                     <a href="index.html">Home</a>
-                    <a href="#guess">Guess</a>
+                    <a href="#guess">Find treasure!</a>
                     <a href="#findmood">Find Mood</a>
                 </div>
             </nav>
         </header>
 
         <main>
-            <div id="guess">
-                <h2>Guess the lyrics!</h2>
-                <p>Click the button below and generate a random lyric to guess.</p> <br>
-                <form action="/save">
+
+            <div id="guess" class="flex-column item-center justify">
+                <h2>Find the treasure song!</h2>
+                <p>Click the button below and it will generate a treasure song's random lyric then you have to find that treasure lyric!</p> <br>
+                <form action="/save" method="post">
                     <button id="generatebtn" type="submit">Generate</button>
                 </form>
+                <p id="famos_lyric"></p>
+                <input type="text" id="guess_output" placeholder=" Enter to execute!">
             </div>
+
+
+
         </main>
 
     </div>
