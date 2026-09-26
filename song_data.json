@@ -1,46 +1,29 @@
 [
     {
-        "name": "I thought I saw your face",
+        "name": "I thought I saw your face today",
         "famous_lyric": "I saw it glitter .....",
         "num": "1",
-<<<<<<< HEAD
         "path": "https://cdn.hackclub.com/01a0d80a-3e5a-7a3f-9e2e-b6119e356944/I%20Thought%20I%20Saw%20Your%20Face%20Today.mp3",
         "cover": "https://cdn.hackclub.com/01a0d811-9569-7204-a75f-5a8f6bf6a1d2/1871201070569155-1877180850414213.webp",
-        "author": "arctic-monkey"
-=======
-        "pathh": "https://cdn.hackclub.com/01a0d80a-3e5a-7a3f-9e2e-b6119e356944/I%20Thought%20I%20Saw%20Your%20Face%20Today.mp3",
-        "cover": "https://cdn.hackclub.com/01a0d811-9569-7204-a75f-5a8f6bf6a1d2/1871201070569155-1877180850414213.webp",
-        "author": "She & Him",
+        "author": "arctic-monkey",
         "genre": "freshing"
->>>>>>> 5da14387ed96a683bf664f09ea2e84afa241439d
     },
     {
         "name": "505",
         "famous_lyric": "",
         "num": "2",
-<<<<<<< HEAD
         "path": "https://cdn.hackclub.com/01a0d80a-3e5a-7a3f-9e2e-b6119e356944/I%20Thought%20I%20Saw%20Your%20Face%20Today.mp3",
         "cover": "https://cdn.hackclub.com/01a0dd34-02b9-707f-91be-d35e2cac2666/arctic-monkey.webp",
-        "author": "arctic-monkey"
-=======
-        "path": "",
-        "cover": "",
-        "author": "arctic_monkey",
+        "author": "arctic-monkey",
         "genre": "lazy"
->>>>>>> 5da14387ed96a683bf664f09ea2e84afa241439d
     },
     {
         "name": "kasari",
         "num": "3",
         "path": "",
-<<<<<<< HEAD
-        "cover": "https://cdn.hackclub.com/01a0dd34-02b9-707f-91be-d35e2cac2666/arctic-monkey.webp",
-        "author": "yabesh-thapa"
-=======
         "cover": "",
-        "author": "yabesh_thpa",
+        "author": "yabesh-thapa",
         "genre": "lapse"
->>>>>>> 5da14387ed96a683bf664f09ea2e84afa241439d
     }
 
 ]

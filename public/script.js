@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
                     songDiv.append(audio);
 
-                    allAudios.push(song);
+                    allAudios.push(audio);
 
                     audio.addEventListener('loadedmetadata', ()=>{
                         total_time.innerHTML = formatTime(audio.duration);
@@ -170,10 +170,16 @@ document.addEventListener('DOMContentLoaded', (e)=>{
                         }
                     });
 
+                    audio.addEventListener('ended', ()=>{
+                        playNextAudio();
+                    });
+                    
+
                     console.log(allAudios);
 
-                    pressplay.addEventListener('click',(e)=>{
-                        currentAudioIndex = allAudios.indexOf(song);
+                    pressplay.addEventListener('click',()=>{
+                        currentAudioIndex = allAudios.indexOf(audio);
+                        console.log(currentAudioIndex);
                         playAudio(audio);
                     })
 
@@ -204,13 +210,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
         song_name.innerHTML = audio.parentElement.querySelector(".song-name").innerHTML;
 
-        setupAudio(audio);
-
     }
 
-    function setupAudio(audio){
-            
-    }
     function formatTime(time){
         if(isNaN(time)){
             return "0:00";
@@ -248,6 +249,41 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         if(currentAudio){
             currentAudio.volume = volume.value/100;
         }
+    })
+
+    function playNextAudio(){
+        if(currentAudioIndex === -1 || allAudios.length === 0){
+            return;
+        }
+
+        let nextIndex = currentAudioIndex + 1;
+
+        if(nextIndex >= allAudios.length){
+            nextIndex = 0;
+        }
+
+        currentAudioIndex = nextIndex;
+        playAudio(allAudios[nextIndex])
+    }
+
+    forward.addEventListener('click', ()=>{
+        playNextAudio();
+    })
+
+    backward.addEventListener('click', ()=>{
+        if(currentAudioIndex === -1 || allAudios.length === 0){
+            return;
+        }
+
+        let prevIndex = currentAudioIndex - 1;
+
+        if(prevIndex < 0){
+            prevIndex = allAudios.length - 1;
+        }
+
+        currentAudioIndex = prevIndex;
+
+        playAudio(allAudios[prevIndex])
     })
     
 })
