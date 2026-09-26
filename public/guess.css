@@ -56,7 +56,7 @@ h1,h2,h3{
     background-color: white;
     
 }
-#guess{
+#guess, #findmood{
     margin-top: 120px;
     background-color: #1918188f;
     height: 300px;
@@ -64,8 +64,9 @@ h1,h2,h3{
     padding-top: 30px;
 
 }
-#guess h2{
-    margin-bottom: 7px;
+#guess h2, #findmood h2{
+    margin-bottom: 10px;
+    font-size: 38px;
 }
 button{
     background-color: white;
@@ -88,4 +89,17 @@ button{
     border: none;
     border-radius: 10px;
     text-align: center;
+}
+#findmood{
+    height: 600px;
+}
+#first-radios, #second-radios {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#first-radios p, #second-radios p{
+    text-indent: -20px;
+}
+.inputs{
+    margin: 10px;
 }
