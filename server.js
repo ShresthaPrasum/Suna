@@ -31,13 +31,27 @@ app.post('/get',(req,res)=>{
 })
 
 app.post('/save', (req,res)=>{
-    // const randomnum = req.body.random;
-    const randomnum = 0;
+    const randomnum = req.body.random;
     const lyricc = song_data[randomnum].famous_lyric;
     res.json({
         success:true,
         famous_lyric: lyricc,
         answer: song_data[randomnum].name
+    })
+})
+
+app.post('/savee', (req,res)=>{
+    const genre = req.body.needed_song;
+    const filtered = song_data.filter(s=>s.genre === genre);
+    const random_num1 = Math.round(Math.random() * filtered.length) - 1;
+    const selected = filtered[random_num1];
+
+    console.log(selected);
+    console.log(random_num1);
+
+    res.json({
+        success:true,
+        req_song: selected
     })
 })
 

@@ -33,7 +33,7 @@
             <div id="guess" class="flex-column item-center justify">
                 <h2>Find the treasure song!</h2>
                 <p>Click the button below and it will generate a treasure song's random lyric then you have to find that treasure lyric!</p> <br>
-                <form action="/save" method="post">
+                <form action="/savee" method="post" id="form">
                     <button id="generatebtn" type="submit">Generate</button>
                 </form>
                 <p id="famos_lyric"></p>
@@ -44,27 +44,27 @@
                 <h2>Find your mood</h2>
                 <h3>Fill up the form below and you will get your moody song afterwards.</h3> <br>
 
-                <form>
+                <form id="formm" action="/mood" method="post">
                     <div id="first-radios">
                     <p>What <b> vibes </b> are you looking for right now?</p> 
 
                     <div class="inputs">
-                    <input type="radio" name="vibes" value="energetic">
+                    <input type="radio" name="vibes" value="energetic" required>
                     <label for="vibes">Energetic</label> <br>
                     </div>
 
                     <div class="inputs">
-                    <input type="radio" name="vibes" value="sleepy">
+                    <input type="radio" name="vibes" value="sleepy" required>
                     <label for="vibes">Sleepy</label> <br>
                     </div>
 
                     <div class="inputs">
-                    <input type="radio" name="vibes" value="focus">
+                    <input type="radio" name="vibes" value="focus" required>
                     <label for="vibes">Focus</label> <br>
                     </div>
 
                     <div class="inputs">
-                    <input type="radio" name="vibes" value="chill">
+                    <input type="radio" name="vibes" value="chill" required>
                     <label for="vibes">Chill</label> <br>
                     </div>
 
@@ -74,28 +74,36 @@
                     <p>What are/were you <b> doing </b> right now?</p> 
 
                     <div class="inputs">
-                    <input type="radio" name="doing" value="Exercise">
+                    <input type="radio" name="doing" value="Exercise" required>
                     <label for="doing">Exercise</label> <br>
                     </div>
 
                     <div class="inputs">
-                    <input type="radio" name="doing" value="doomscrolling">
+                    <input type="radio" name="doing" value="doomscrolling" required>
                     <label for="doing">Doom Scrolling</label> <br>
                     </div>
 
                     <div class="inputs">
-                    <input type="radio" name="doing" value="Studying">
+                    <input type="radio" name="doing" value="Studying" required>
                     <label for="doing">Studying</label> <br>
                     </div>
                     
                     <div class="inputs">
-                    <input type="radio" name="doing" value="nothing">
+                    <input type="radio" name="doing" value="nothing" required>
                     <label for="nothing">Nothing</label> <br>
                     </div>
 
                     </div>
 
+                    <button id="submitt" type="submit">Submit!</button>
+
                 </form>
+
+                <div id="output_suggestion">
+                     <p>Your matched song is: </p>
+                     <h2>7 Years</h2>
+                     <p>Go and vibe to this song in the <a href="index.html">listening page.</a></p>
+                </div>
 
             </div>
 

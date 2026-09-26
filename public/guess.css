@@ -103,3 +103,8 @@ button{
 .inputs{
     margin: 10px;
 }
+
+#output_suggestion{
+    display: none;
+    margin_top: 20px;
+}
