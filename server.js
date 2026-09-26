@@ -5,7 +5,6 @@ const fs = require('fs');;
 const path = require('path');
 const pathhs = [];
 const coverss = [];
-const lyric = [];
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
@@ -16,8 +15,6 @@ console.log(song_data)
 for(let i=0; i<song_data.length; i++){
     const pathh = song_data[i].pathh;
     const cover = song_data[i].cover;
-    const lyricc = song_data[i].famous_lyric;
-    lyric.push(lyricc);
     pathhs.push(pathh);
     coverss.push(cover);
 }
@@ -34,11 +31,13 @@ app.post('/get',(req,res)=>{
 })
 
 app.post('/save', (req,res)=>{
-    const randomnum = req.body.random;
-    console.log(randomnum)
+    // const randomnum = req.body.random;
+    const randomnum = 0;
+    const lyricc = song_data[randomnum].famous_lyric;
     res.json({
         success:true,
-        famous_lyric: lyric
+        famous_lyric: lyricc,
+        answer: song_data[randomnum].name
     })
 })
 

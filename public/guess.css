@@ -61,6 +61,7 @@ h1,h2,h3{
     background-color: #1918188f;
     height: 300px;
     padding: 10px;
+    padding-top: 30px;
 
 }
 #guess h2{
@@ -75,4 +76,16 @@ button{
     font-weight: bold;
     border: none;
     border-radius: 20px;
+} 
+
+#famos_lyric, #guess_output{
+    display: none;
+    margin-top: 20px;
+}
+#guess_output{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
 }
