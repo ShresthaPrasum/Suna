@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const formbtn = document.querySelector("#generatebtn");
-  const form = document.querySelector("form");
+  const form = document.querySelector("#form");
+  const formm = document.querySelector('#formm');
+
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -42,4 +44,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
   });
+  
+  formm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const formdata = new FormData(formm);
+    const vibes = formdata.get('vibes');
+    const doing = formdata.get('doing');
+    let lapsesong = false;
+    let lazy = false;
+    let freshing = false;
+    if(doing==='Exercise'){
+        lapsesong= true;
+        lazy = false;
+        freshing= false;
+    }
+    else if(doing==='doomscrolling'){
+        lazy = true;
+        freshing= false;
+        lapsesong = false;
+    }
+    else if(doing==='Studying'){
+        lapsesong = true;
+        lazy = false;
+        freshing = false;
+    }
+    else if(doing==='nothing'){
+        freshing = true;
+        lazy = false;
+        lapsesong = false;
+    }
+    
+    if(vibes==='energetic'){
+        lapsesong = true;
+        freshing= false;
+        lazy = false;
+    }
+    else if(vibes==='sleepy'){
+        lazy = true;
+        freshing = false;
+        lapsesong = false;
+    }
+    else if(vibes==='focus'){
+        lapsesong = true;
+        freshing = false;
+        lazy = false;
+    }
+    else if(vibes==='chill'){
+        freshing = true;
+        lazy = false;
+        lapsesong = false;
+    }
+
+    
+
+    let helo;
+    if(freshing == true){
+       helo = 'freshing';
+    }
+    else if (lazy == true){
+        helo = 'lazy';
+    }
+    else if(lapsesong == true){
+        helo = 'lapse'
+    }
+    else{
+        console.error('BRUH');
+    }
+
+
+  })
 });
