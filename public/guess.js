@@ -139,4 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
   })
+
+    const hit = document.querySelector("#hit_form");
+
+    hit.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const formdataa = new FormData(hit);
+        const difficulty = formdataa.get('diff');
+        console.log(difficulty);
+
+        fetch('/hit', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                diff: difficulty
+            })
+        })
+        .then(response=>response.json())
+        .then(result=>{
+            
+        })
+    })
 });

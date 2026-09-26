@@ -107,6 +107,41 @@
 
             </div>
 
+            <div id="find" class="flex-column item-center">
+                <h2>Find the treasure song! 
+                   <br> (from the audio version)</h2>
+
+                <form  method="post" id="hit_form">
+                <h3>Select the guessing difficulty!</h3>
+
+                    <div id="radioss">
+
+                      <div class="inputs">
+                        <input type="radio" name="diff" value="Easy">
+                        <label for="easy">Easy</label>
+                      </div>
+
+                      <div class="inputs">
+                        <input type="radio" name="diff" value="medium">
+                        <label for="medium">Medium</label>
+                      </div>
+
+                      <div class="inputs">
+                        <input type="radio"  name="diff" value="hard">
+                        <label for="hard">Hard</label>
+                      </div>
+                    </div>
+
+                <button id="audio_submit" type="submit">Generate Audio</button>
+
+                </form>
+
+                <div id="output-audio">
+
+                </div>
+
+            </div>
+
         </main>
 
     </div>

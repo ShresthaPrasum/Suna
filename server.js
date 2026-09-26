@@ -55,6 +55,11 @@ app.post('/savee', (req,res)=>{
     })
 })
 
+app.post('/hit', (req,res)=>{
+    const difficulty = req.body.diff;
+    console.log(difficulty);
+})
+
 app.listen(port, ()=>{
     console.log(`Server running on http://localhost:${port}`);
 })
