@@ -22,8 +22,8 @@
         "num": "3",
         "path": "",
         "cover": "",
-        "author": "yabesh-thapa",
-        "genre": "lapse"
+        "author": "Yabesh Thapa",
+        "genre": ""
     },
     {
         "name": "Rap God",
@@ -157,9 +157,91 @@
         "name": "Fewataal feat. DONG",
         "num": "20",
         "path": "",
-        "cover": "Yabesh Thapa",
+        "cover": "",
         "author": "Yabesh Thapa",
         "genre": ""
-    }
+    },
+    {
+        "name": "Alapatra",
+        "num": "21",
+        "path": "",
+        "cover": "",
+        "author": "Yabesh Thapa",
+        "genre": ""
+    },
+    {
+        "name": "Ae Mutu, feat Zeroo",
+        "num": "22",
+        "path": "",
+        "cover": "",
+        "author": "Yabesh Thapa",
+        "genre": "",
+    },
+    {
+        "name": "Aakhale",
+        "num": "23",
+        "path": "",
+        "cover": "",
+        "author": "",
+        "genre": ""
+    },
+    {
+        "name": "HUMBLE",
+        "num": "24",
+        "path": "",
+        "cover": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "All the Stars",
+        "num": "25",
+        "path": "",
+        "cover": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "Not Like Us",
+        "num": "26",
+        "path": "",
+        "cover": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "Money Trees",
+        "num": "27",
+        "path": "",
+        "cover": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "LOYALTY",
+        "num": "28",
+        "path": "",
+        "cover": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "peekaboo",
+        "num": "29",
+        "path": "",
+        "cove": "",
+        "author": "Kendrick Lamar",
+        "genre": ""
+    },
+    {
+        "name": "West Coast",
+        "num": "30",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
 
+    }
 ]
