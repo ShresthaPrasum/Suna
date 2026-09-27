@@ -1,11 +1,11 @@
 let currentAudio = null;
 let selectedsong = null;
 let points = 0;
+let output_answer = "";
 document.addEventListener("DOMContentLoaded", () => {
   const formbtn = document.querySelector("#generatebtn");
   const form = document.querySelector("#form");
-  const formm = document.querySelector('#formm');
-
+  const formm = document.querySelector("#formm");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -18,240 +18,244 @@ document.addEventListener("DOMContentLoaded", () => {
         random: random_num,
       }),
     })
-
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
           const famous_lyric = result.famous_lyric;
-          const output_answer = result.answer;
+          output_answer = result.answer;
           console.log(output_answer);
           console.log(famous_lyric);
           const output = document.querySelector("#famos_lyric");
           const guess_output = document.querySelector("#guess_output");
-          document.querySelector('#guess').style.height = "285px";
+          document.querySelector("#guess").style.height = "285px";
           guess_output.style.display = "flex";
           output.style.display = "flex";
           output.innerHTML = `The famous lyric is, "<b>  ${famous_lyric}" </b>`;
-          guess_output.addEventListener('keydown', (e)=>{
-            if(e.key=='Enter'){
-                e.preventDefault();
-                console.log("pressed");
-                const guessed = guess_output.value;
-                if(guessed.toLowerCase() == output_answer.toLowerCase()){
-                    alert(`You GUESSED IT!!!! It was ${output_answer}`);
-                }else{
-                    alert(`WRONG! Better use your ball knowledge!`);
-                    return;
-                }
-            }
-          })
         }
       });
   });
-  
-  formm.addEventListener("submit", (e)=>{
+
+  formm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const formdata = new FormData(formm);
-    const vibes = formdata.get('vibes');
-    const doing = formdata.get('doing');
-    const random_numm = Math.round(Math.random()*3);
+    const vibes = formdata.get("vibes");
+    const doing = formdata.get("doing");
+    const random_numm = Math.round(Math.random() * 3);
 
     let lapsesong = false;
     let lazy = false;
     let freshing = false;
 
-    if(doing==='Exercise'){
-        lapsesong= true;
-        lazy = false;
-        freshing= false;
-    }
-    else if(doing==='doomscrolling'){
-        lazy = true;
-        freshing= false;
-        lapsesong = false;
-    }
-    else if(doing==='Studying'){
-        lapsesong = true;
-        lazy = false;
-        freshing = false;
-    }
-    else if(doing==='nothing'){
-        freshing = true;
-        lazy = false;
-        lapsesong = false;
-    }
-    
-    if(vibes==='energetic'){
-        lapsesong = true;
-        freshing= false;
-        lazy = false;
-    }
-    else if(vibes==='sleepy'){
-        lazy = true;
-        freshing = false;
-        lapsesong = false;
-    }
-    else if(vibes==='focus'){
-        lapsesong = true;
-        freshing = false;
-        lazy = false;
-    }
-    else if(vibes==='chill'){
-        freshing = true;
-        lazy = false;
-        lapsesong = false;
+    if (doing === "Exercise") {
+      lapsesong = true;
+      lazy = false;
+      freshing = false;
+    } else if (doing === "doomscrolling") {
+      lazy = true;
+      freshing = false;
+      lapsesong = false;
+    } else if (doing === "Studying") {
+      lapsesong = true;
+      lazy = false;
+      freshing = false;
+    } else if (doing === "nothing") {
+      freshing = true;
+      lazy = false;
+      lapsesong = false;
     }
 
-    
-    let helo = "nothing"
-    if(freshing == true){
-      helo = 'freshing';
+    if (vibes === "energetic") {
+      lapsesong = true;
+      freshing = false;
+      lazy = false;
+    } else if (vibes === "sleepy") {
+      lazy = true;
+      freshing = false;
+      lapsesong = false;
+    } else if (vibes === "focus") {
+      lapsesong = true;
+      freshing = false;
+      lazy = false;
+    } else if (vibes === "chill") {
+      freshing = true;
+      lazy = false;
+      lapsesong = false;
     }
-    else if (lazy == true){
-       helo = 'lazy';
-    }
-    else if(lapsesong == true){
-     helo = 'lapse';
-    }
-    else{
-        console.error('BRUH');
+
+    let helo = "nothing";
+    if (freshing == true) {
+      helo = "freshing";
+    } else if (lazy == true) {
+      helo = "lazy";
+    } else if (lapsesong == true) {
+      helo = "lapse";
+    } else {
+      console.error("BRUH");
     }
     console.log(helo);
 
-    fetch('/savee',{
-        method: 'POST',
-        headers: {"Content-type": "application/json"},
-        body: JSON.stringify({
-            needed_song: helo,
-            random_numm: random_numm
-        })
+    fetch("/savee", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        needed_song: helo,
+        random_numm: random_numm,
+      }),
     })
-    .then(response=>response.json())
-    .then(result=>{
-        if(result.success){
-            const req_song = result.req_song;
-            const req_song_name = req_song.name;
-            
-            const outpt = document.querySelector('#output_suggestion');
-            document.querySelector('#findmood').style.height = "716px";
-            outpt.style.display = "flex";
-            outpt.style.marginTop = "44px";
-            document.querySelector('#s_h2').innerText = `${req_song_name.toUpperCase()}`;
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success) {
+          const req_song = result.req_song;
+          const req_song_name = req_song.name;
+
+          const outpt = document.querySelector("#output_suggestion");
+          document.querySelector("#findmood").style.height = "716px";
+          outpt.style.display = "flex";
+          outpt.style.marginTop = "44px";
+          document.querySelector("#s_h2").innerText =
+            `${req_song_name.toUpperCase()}`;
         }
+      });
+  });
+
+  const hit = document.querySelector("#hit_form");
+
+  hit.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.src = "";
+    }
+    const formdataa = new FormData(hit);
+    const difficulty = formdataa.get("diff");
+    console.log(difficulty);
+
+    fetch("/hit", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        diff: difficulty,
+      }),
     })
+      .then((response) => response.json())
+      .then(async (result) => {
+        if (result.success) {
+          let where = "middle";
+          if (difficulty === "easy") {
+            where = "middle";
+          } else if (difficulty === "medium") {
+            where = "start";
+          } else if (difficulty === "hard") {
+            where = "end";
+          }
 
-  })
+          selectedsong = result.song;
+          const song_play = await fetch(selectedsong.path);
+          const blob = await song_play.blob();
+          const url = URL.createObjectURL(blob);
+          const audio = new Audio(url);
+          let stop;
+          audio.play();
+          document.querySelector("#guessed-song").style.display = "flex";
 
-    const hit = document.querySelector("#hit_form");
-
-    hit.addEventListener('submit', (e)=>{
-        e.preventDefault();
-        if(currentAudio){
-            currentAudio.pause();
-            currentAudio.src = "";
-        }
-        const formdataa = new FormData(hit);
-        const difficulty = formdataa.get('diff');
-        console.log(difficulty);
-
-        fetch('/hit', {
-            method: 'POST',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                diff: difficulty
-            })
-        })
-        .then(response=>response.json())
-        .then(async (result)=>{
-            if(result.success){
-                let where = 'middle';
-                if(difficulty==='easy'){
-                    where = 'middle';
-                }else if(difficulty==='medium'){
-                    where = 'start';
-                }else if(difficulty==='hard'){
-                    where = 'end';
-                }
-                
-                selectedsong = result.song;
-                const song_play = await fetch(selectedsong.path);
-                const blob = await song_play.blob();
-                const url = URL.createObjectURL(blob);
-                const audio = new Audio(url);
-                let stop;
-                audio.play();
-                document.querySelector('#guessed-song').style.display = "flex";
-
-                audio.addEventListener('loadeddata', ()=>{
-                    const duration = audio.duration;
-                    let random_start = 0;
-                    let durationn =5;
-                    console.log(duration);
-                    if(where==='start'){
-                        random_start = 0.1;
-                        durationn = 3.25;
-                    }else if(where==='middle'){
-                        random_start = duration/2;
-                        durationn = 5;
-                    }else if(where==='end'){
-                        random_start = duration - 12;
-                        durationn = 2;
-                    }else {
-                        console.error('BRUHHHH');
-                    }
-                    // const random_start = Math.random()* duration;
-                    let play_current = random_start;
-                    let play_duration = durationn;
-                    audio.currentTime = random_start;
-                    audio.play().then(()=>{
-                       stop = setTimeout(() => {
-                            audio.pause();
-                            URL.revokeObjectURL(url);
-                        }, durationn * 1000);
-                    })
-                   
-                      document.querySelector('#play_again').addEventListener('click', (e)=>{
-                    e.preventDefault();
-                    document.querySelector('#play_again').disabled = true;
-                    playagain(play_duration, play_current);
-                    play_current = null;
-                    play_duration = null;
-                    clearTimeout(stop);
-                })
-                })
-
-                function playagain(play_duration, play_current){
-                    audio.currentTime = play_current;
-                    audio.play().then(()=>{
-                      stop = setTimeout(()=>{
-                            audio.pause();
-                            URL.revokeObjectURL(url);
-                        }, play_duration * 1000);
-                    })
-                    document.querySelector('#play_again').disabled = false;
-                }
-                document.querySelector('#play_again').addEventListener('click', (e)=>{
-                    e.preventDefault();
-                    document.querySelector('#play_again').disabled = true;
-                })
-                
+          audio.addEventListener("loadeddata", () => {
+            const duration = audio.duration;
+            let random_start = 0;
+            let durationn = 5;
+            console.log(duration);
+            if (where === "start") {
+              random_start = 0.1;
+              durationn = 3.25;
+            } else if (where === "middle") {
+              random_start = duration / 2;
+              durationn = 5;
+            } else if (where === "end") {
+              random_start = duration - 12;
+              durationn = 2;
+            } else {
+              console.error("BRUHHHH");
             }
-        })
-    })
+            // const random_start = Math.random()* duration;
+            let play_current = random_start;
+            let play_duration = durationn;
+            audio.currentTime = random_start;
+            audio.play().then(() => {
+              stop = setTimeout(() => {
+                audio.pause();
+                URL.revokeObjectURL(url);
+              }, durationn * 1000);
+            });
+
+            document
+              .querySelector("#play_again")
+              .addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector("#play_again").disabled = true;
+                playagain(play_duration, play_current);
+                play_current = null;
+                play_duration = null;
+                clearTimeout(stop);
+              });
+          });
+
+          function playagain(play_duration, play_current) {
+            audio.currentTime = play_current;
+            audio.play().then(() => {
+              stop = setTimeout(() => {
+                audio.pause();
+                URL.revokeObjectURL(url);
+              }, play_duration * 1000);
+            });
+            document.querySelector("#play_again").disabled = false;
+          }
+          document
+            .querySelector("#play_again")
+            .addEventListener("click", (e) => {
+              e.preventDefault();
+              document.querySelector("#play_again").disabled = true;
+            });
+        }
+      });
+  });
 });
-document.querySelector('#guessed-song').addEventListener('keydown', (event)=>{
-                    if(event.key === 'Enter'){
-                        const valuee = document.querySelector('#guessed-song').value;
-                        const realans = selectedsong.name;
-                        if(valuee.toLowerCase() === realans.toLowerCase()){
-                            alert(`YOU GUESSED IT!!!!!!! +250 points`);
-                            points = points + 250;
-                            alert(`You are at ${points} points right now!`);
-                        }else{
-                            alert(`WRONG!, It was ${realans.toLowerCase()}`);
-                            return;
-                        }
-                    }
-                })
-                
+guess_output.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    e.preventDefault();
+    console.log("pressed");
+    const guessed = guess_output.value;
+    if (guessed.toLowerCase() == output_answer.toLowerCase()) {
+      points = points + 250;
+      alert(`You GUESSED IT!!!! It was ${output_answer}, + 250 points`);
+      alert(`You currently have ${points} points!`);
+      if (points >= 5000) {
+        alert(
+          `We, the Suna team award you Suna ball knowledge d'or for having so much ball knowledge!`,
+        );
+      }
+    } else {
+      alert(`WRONG! Better use your ball knowledge!`);
+      return;
+    }
+  }
+});
+
+document.querySelector("#guessed-song").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const valuee = document.querySelector("#guessed-song").value;
+    const realans = selectedsong.name;
+    if (valuee.toLowerCase() === realans.toLowerCase()) {
+      alert(`YOU GUESSED IT!!!!!!! +250 points`);
+      points = points + 250;
+      alert(`You are at ${points} points right now!`);
+      if (points >= 5000) {
+        alert(
+          `We, the Suna team award you Suna ball knowledge d'or for having so much ball knowledge!`,
+        );
+      }
+    } else {
+      alert(`WRONG!, It was ${realans.toLowerCase()}`);
+      return;
+    }
+  }
+});
