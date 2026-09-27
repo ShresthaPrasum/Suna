@@ -14,14 +14,12 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     .then(result=>{
         if(result.success){
             song_data = result.song_data;
-            const paths = result.paths;
-            const covers = result.covers;
-            console.log(song_data);
-            console.log(paths);
+            loadArtistSongs('arctic-monkey');
         }
     })
     .catch(error=> console.error(error));
 
+    // VEry important variables which will be used to create song divs and for the audio playing logic
     const song_name = document.querySelector('#song-name');
 
     const backward  = document.querySelector('#backward');
@@ -36,72 +34,6 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     
     const volume  = document.querySelector('#volume-slider');
 
-    const musics = {
-        arctic_monkey: [
-            {'doiwannaknow': 'Do I wanna Know'},
-            {'ru_mine': 'R U Mine'},
-            {'505': '505'},
-            {'kneesocks': 'Knee Socks'},
-            {'rumine':'R U Mine'},
-            {'no1partyanthem': 'No. 1 Party Anthem'},
-            {'arabella': 'Arabella'},
-            {'snapoutofit': 'snapoutofit'}
-        ]
-        ,
-        lana_del_rey:[
-            {'summertimesadness': 'Summertime Sadness'},
-            {'youngandbeautiful': 'Young and Beautiful'},
-            {'borntodie': 'Born To DIe'},
-            {'bluejeans':'Blue Jeans'},
-            {'westcoast': 'West Coast'},
-            {'lustforlife': 'Lust For Life'},
-            {'sayyestoheaven': 'Say Yes To Heavem'}
-        ],
-        kendrick_lamar:[
-            {'humble': 'Humble'},
-            {'allthestars': 'All The Stars'},
-            {'notlikeus': 'Not Like Us'},
-            {'moneytree':'Money Tree'},
-            {'loyalty': 'Loyalty'},
-            {'peekaboo': 'Peekaboo'}
-        ],
-        yabesh_thapa:[
-            {'kasari': 'Kasari'},
-            {'aakhale': 'Aakhale'},
-            {'aemutu': 'Ae Mutu'},
-            {'alaptra':'Alaptra'},
-            {'fewataal': 'Fewataal'},
-            {'firfirey': 'Firfirey'}
-        ],
-
-        nepali:[
-            {'kyomayaho': 'K yo Maya Ho'},
-            {'aakhakobato': 'Aakhako Bato'},
-            {'suna': 'Suna'},
-            {'maskimaski': 'Maski Maski'},
-            {'nihita': 'Nihita'},
-            {'vananamatrw': 'Vanana Matrw'}
-        ],
-
-        imagine_dragons:[
-            {'believer': 'Believer'},
-            {'demons': 'Demons'},
-            {'radioactive': 'Radioactive'},
-            {'thunder':'Thunder'},
-            {'whateverittakes': 'Whatever It Takes'},
-            {'bones': 'Bones'}
-        ],
-
-        eminem:[
-            {'loseyourself': 'Lose Yourself'},
-            {'stan': 'Stan'},
-            {'notafraid': 'Not Afraid'},
-            {'therealSlimShady':'The Real Slim Shady'},
-            {'withoutme': 'Without Me'},
-            {'rapgod': 'Rap God'}
-        ]
-    }
-
     let audio_playing = false;
 
     let currentAudio = null;
@@ -114,80 +46,88 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
     let artists = document.querySelectorAll('.singer');
 
+
+    function loadArtistSongs(artistSlug) {
+        music_container.innerHTML = '';
+        allAudios = [];
+        currentAudioIndex = -1;
+
+        song_data.forEach((song) => {
+            if (song.author === artistSlug) {
+                initializeAudioElements(song);
+            }
+        });
+    }
+
+
     artists.forEach((artist)=>{
         artist.addEventListener('click', (e)=>{
             music_container.innerHTML = '';
-            allAudios = [];
-
-            song_data.forEach((song)=>{
-                console.log(song.author);
-                if(song.author == artist.dataset.singer){                  
-
-                    let songDiv = document.createElement('div');
-                    songDiv.className = 'music'
-                    
-
-                    let songCover = document.createElement('img');
-                    songCover.src = song.cover;
-                    songCover.className = 'music-cover';
-                    songDiv.append(songCover);
-
-                    let songName = document.createElement('p');
-                    songName.className = 'song-name ';
-                    songName.innerHTML = song.name;
-                    songDiv.append(songName);
-
-                    let songArtist = document.createElement('p');
-                    songArtist.className = 'artist-name bg-grey';
-                    songArtist.innerHTML = song.author;
-                    songDiv.append(songArtist);
-
-                    const pressplay = document.createElement("button");
-                    pressplay.className = "press-play";
-                    pressplay.innerHTML = "<i class='fas fa-play'></i>";
-                    songDiv.append(pressplay);
-
-                    let audio = document.createElement('audio');
-                    audio.src = song.path;
-
-                    songDiv.append(audio);
-
-                    allAudios.push(audio);
-
-                    audio.addEventListener('loadedmetadata', ()=>{
-                        total_time.innerHTML = formatTime(audio.duration);
-                    });
-                
-
-                    audio.addEventListener('timeupdate', ()=>{
-                        if(currentAudio === audio){
-                            
-                            current_time.innerHTML = formatTime(audio.currentTime);
-                            total_time.innerHTML = formatTime(audio.duration);
-
-                            const percentage = (audio.currentTime/ audio.duration) * 100;
-                            progress_bar.value = percentage;
-                        }
-                    });
-
-                    audio.addEventListener('ended', ()=>{
-                        playNextAudio();
-                    });
-                    
-
-                    console.log(allAudios);
-
-                    pressplay.addEventListener('click',()=>{
-                        currentAudioIndex = allAudios.indexOf(audio);
-                        console.log(currentAudioIndex);
-                        playAudio(audio);
-                    })
-
-                    music_container.append(songDiv);
-                }
-            })
+            loadArtistSongs(artist.dataset.singer);
         })
     })
+
+    function initializeAudioElements(song){
+        let songDiv = document.createElement('div');
+        songDiv.className = 'music'
+        
+
+        let songCover = document.createElement('img');
+        songCover.src = song.cover;
+        songCover.className = 'music-cover';
+        songDiv.append(songCover);
+
+        let songName = document.createElement('p');
+        songName.className = 'song-name ';
+        songName.innerHTML = song.name;
+        songDiv.append(songName);
+
+        let songArtist = document.createElement('p');
+        songArtist.className = 'artist-name bg-grey';
+        songArtist.innerHTML = song.author;
+        songDiv.append(songArtist);
+
+        const pressplay = document.createElement("button");
+        pressplay.className = "press-play";
+        pressplay.innerHTML = "<i class='fas fa-play'></i>";
+        songDiv.append(pressplay);
+
+        let audio = document.createElement('audio');
+        audio.src = song.path;
+
+        songDiv.append(audio);
+
+        allAudios.push(audio);
+
+        audio.addEventListener('loadedmetadata', ()=>{
+            total_time.innerHTML = formatTime(audio.duration);
+        });
+    
+
+        audio.addEventListener('timeupdate', ()=>{
+            if(currentAudio === audio){
+                
+                current_time.innerHTML = formatTime(audio.currentTime);
+                total_time.innerHTML = formatTime(audio.duration);
+
+                const percentage = (audio.currentTime/ audio.duration) * 100;
+                progress_bar.value = percentage;
+            }
+        });
+
+        audio.addEventListener('ended', ()=>{
+            playNextAudio();
+        });
+        
+
+        pressplay.addEventListener('click',()=>{
+            currentAudioIndex = allAudios.indexOf(audio);
+            console.log(currentAudioIndex);
+            playAudio(audio);
+        })
+
+        music_container.append(songDiv);
+    }
 
     function playAudio(audio){
         if(currentAudio && currentAudio !== audio){
@@ -209,7 +149,6 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         }
 
         song_name.innerHTML = audio.parentElement.querySelector(".song-name").innerHTML;
-
     }
 
     function formatTime(time){
