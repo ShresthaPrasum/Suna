@@ -24,6 +24,142 @@
         "cover": "",
         "author": "yabesh-thapa",
         "genre": "lapse"
+    },
+    {
+        "name": "Rap God",
+        "num": "4",
+        "path": "https://cdn.hackclub.com/01a0e1be-1486-720d-92d4-6cbf85b4a7a8/Eminem%20-%20Rap%20God%20(Audio).mp3",
+        "cover": "https://cdn.hackclub.com/01a0e1bd-7802-76d5-b7e9-3095ce41b4af/Eminem%20-%20Rap%20God%20(Audio).webp",
+        "author": "Eminem",
+        "genre": "lazy"
+    },
+    {
+        "name": "Without Me",
+        "num": "5",
+        "path": "",
+        "cover":"",
+        "author": "Eminem",
+        "genre": ""
+    },
+    {
+        "name": "The Real Slim Shady",
+        "num": "6",
+        "path": "",
+        "cover": "",
+        "author": "Eminem",
+        "genre": ""
+    },
+    {
+        "name": "Stan",
+        "num": "7",
+        "path": "",
+        "cover": "",
+        "author": "Eminem", 
+        "genre": ""
+    },
+    {
+        "name": "Not Afraid",
+        "num": "8",
+        "path": "",
+        "cover": "",
+        "author": "Eminem",
+        "genre": ""
+    },
+    {
+        "name": "Lose Yourself",
+        "num": "9",
+        "path": "",
+        "cover": "",
+        "author": "Eminem",
+        "genre": ""
+    },
+    {
+        "name": "Bones",
+        "num": "10",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "Whatever It Takes",
+        "num": "11",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "Thunder",
+        "num": "12",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "Radioacitve",
+        "num": "13",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "Believer",
+        "num": "14",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "Demons",
+        "num": "15",
+        "path": "",
+        "cover": "",
+        "author": "Imagine Dragons",
+        "genre": ""
+    },
+    {
+        "name": "AAKHAKO BATO",
+        "num": "16",
+        "path": "",
+        "cover": "",
+        "author": "B-8EIGHT",
+        "genre": ""
+    },
+    {
+        "name": "Maski Maski",
+        "num": "17",
+        "path": "",
+        "cover": "",
+        "author": "B-8EIGHT",
+        "genre": ""
+    },
+    {
+        "name": "K Yo Maya Ho",
+        "num": "18",
+        "path": "",
+        "cover": "",
+        "author": "B-8EIGHT",
+        "genre": ""
+    },
+    {
+        "name": "Firfirey",
+        "num": "19",
+        "path": "",
+        "cover": "",
+        "author": "Yabesh Thapa",
+        "genre": ""
+    },
+    {
+        "name": "Fewataal feat. DONG",
+        "num": "20",
+        "path": "",
+        "cover": "Yabesh Thapa",
+        "author": "Yabesh Thapa",
+        "genre": ""
     }
 
 ]
