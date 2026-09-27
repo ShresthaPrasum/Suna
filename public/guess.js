@@ -157,32 +157,74 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(response=>response.json())
         .then(async (result)=>{
-            let where = 'start';
-            if(difficulty==='easy'){
-                where = 'middle';
-            }else if(difficulty==='medium'){
-
-            }
             if(result.success){
+                let where = 'middle';
+                if(difficulty==='easy'){
+                    where = 'middle';
+                }else if(difficulty==='medium'){
+                    where = 'start';
+                }else if(difficulty==='hard'){
+                    where = 'end';
+                }
+                
                 const selected_song = result.song;
                 const song_play = await fetch(selected_song.path);
                 const blob = await song_play.blob();
                 const url = URL.createObjectURL(blob);
                 const audio = new Audio(url);
+                let stop;
                 audio.play();
 
                 audio.addEventListener('loadeddata', ()=>{
                     const duration = audio.duration;
+                    let random_start = 0;
+                    let durationn =5;
                     console.log(duration);
-                    const random_start = Math.random()* duration;
-                    const durationn =5;
+                    if(where==='start'){
+                        random_start = 0.1;
+                        durationn = 3.25;
+                    }else if(where==='middle'){
+                        random_start = duration/2;
+                        durationn = 5;
+                    }else if(where==='end'){
+                        random_start = duration - 12;
+                        durationn = 2;
+                    }else {
+                        console.error('BRUHHHH');
+                    }
+                    // const random_start = Math.random()* duration;
+                    let play_current = random_start;
+                    let play_duration = durationn;
                     audio.currentTime = random_start;
                     audio.play().then(()=>{
-                        setTimeout(() => {
+                       stop = setTimeout(() => {
                             audio.pause();
                             URL.revokeObjectURL(url);
                         }, durationn * 1000);
                     })
+                      document.querySelector('#play_again').addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    document.querySelector('#play_again').disabled = true;
+                    playagain(play_duration, play_current);
+                    play_current = null;
+                    play_duration = null;
+                    clearTimeout(stop);
+                })
+                })
+
+                function playagain(play_duration, play_current){
+                    audio.currentTime = play_current;
+                    audio.play().then(()=>{
+                      stop = setTimeout(()=>{
+                            audio.pause();
+                            URL.revokeObjectURL(url);
+                        }, play_duration * 1000);
+                    })
+                    document.querySelector('#play_again').disabled = false;
+                }
+                document.querySelector('#play_again').addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    document.querySelector('#play_again').disabled = true;
                 })
 
             }

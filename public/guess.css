@@ -128,3 +128,7 @@ a{
 #output-audio{
     display: none;
 }
+.play{
+    height: 26px;
+    width: 26px;
+}
