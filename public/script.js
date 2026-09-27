@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     .then(result=>{
         if(result.success){
             song_data = result.song_data;
-            loadArtistSongs('arctic-monkey');
+            loadArtistSongs('Arctic Monkeys');
         }
     })
     .catch(error=> console.error(error));
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
     artists.forEach((artist)=>{
         artist.addEventListener('click', (e)=>{
-            music_container.innerHTML = '';
+            console.log(artist.dataset.singer);
             loadArtistSongs(artist.dataset.singer);
         })
     })
