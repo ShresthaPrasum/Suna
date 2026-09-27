@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     // VEry important variables which will be used to create song divs and for the audio playing logic
     const song_name = document.querySelector('#song-name');
 
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+
+
     const backward  = document.querySelector('#backward');
     const play_pause  = document.querySelector('#play');
     const forward  = document.querySelector('#forward');
@@ -42,19 +46,27 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
     let allAudios = []
 
-    let music_container = document.querySelector('.musics');
+    let music_container = document.querySelector('#music-container');
+
+    let popular_songs = document.querySelector('#popular-songs');
 
     let artists = document.querySelectorAll('.singer');
+
+    const scrollAmount = 220;
 
 
     function loadArtistSongs(artistSlug) {
         music_container.innerHTML = '';
+        popular_songs.innerHTML = '';
         allAudios = [];
         currentAudioIndex = -1;
 
         song_data.forEach((song) => {
             if (song.author === artistSlug) {
-                initializeAudioElements(song);
+                initializeAudioElements(song, music_container);
+            }
+            if (song.popular === "true" && song.author === artistSlug) {
+                initializeAudioElements(song, popular_songs);
             }
         });
     }
@@ -67,7 +79,9 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         })
     })
 
-    function initializeAudioElements(song){
+
+
+    function initializeAudioElements(song, musicContainer) {
         let songDiv = document.createElement('div');
         songDiv.className = 'music'
         
@@ -126,7 +140,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             playAudio(audio);
         })
 
-        music_container.append(songDiv);
+        musicContainer.append(songDiv);
     }
 
     function playAudio(audio){
@@ -224,6 +238,18 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
         playAudio(allAudios[prevIndex])
     })
+
+    
+    leftBtn.addEventListener("click", () => 
+        music_container.scrollBy({ 
+            left: -scrollAmount, behavior: "smooth" 
+    }));
+
+    rightBtn.addEventListener("click", () =>
+        music_container.scrollBy({ 
+            left: scrollAmount, behavior: "smooth" 
+    }));
+
     
 })
 

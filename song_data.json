@@ -5,8 +5,9 @@
         "num": "1",
         "path": "https://cdn.hackclub.com/01a0d80a-3e5a-7a3f-9e2e-b6119e356944/I%20Thought%20I%20Saw%20Your%20Face%20Today.mp3",
         "cover": "https://cdn.hackclub.com/01a0d811-9569-7204-a75f-5a8f6bf6a1d2/1871201070569155-1877180850414213.webp",
-        "author": "Arctic Monkeys",
-        "genre": "freshing"
+        "author": "She & Him",
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
         "name": "505",
@@ -15,7 +16,8 @@
         "path": "https://cdn.hackclub.com/01a0e19e-e116-7d17-9094-5a6f26d8b7d1/Arctic%20Monkeys%20-%20505.mp3",
         "cover": "https://cdn.hackclub.com/01a0de6c-f2f1-7df1-8aa2-9e716f7df6ae/Arctic%20Monkeys%20-%20505.webp",
         "author": "Arctic Monkeys",
-        "genre": "lapse"
+        "genre": "lapse",
+        "popular" : "true"
     },
     {
         "name": "kasari",
@@ -25,6 +27,8 @@
         "cover": "https://cdn.hackclub.com/01a0e1b7-27e2-73f9-b42f-abedb9f1cf3d/Yabesh%20Thapa%20-%20Kasari%20%E2%A7%B8%20%E0%A4%95%E0%A4%B8%E0%A4%B0%E0%A5%80.webp",
         "author": "Yabesh Thapa",
         "genre": "lazy"
+        ,
+        "popular" : "true"
     },
     {
         "name": "Rap God",
@@ -42,7 +46,8 @@
         "path": "https://cdn.hackclub.com/01a0e1be-0111-7190-97da-9df21c1fcbe5/Eminem%20-%20Without%20Me%20(Audio).mp3",
         "cover":"https://cdn.hackclub.com/01a0e1bd-7a0f-73fc-9cd1-95ddde34caed/Eminem%20-%20Without%20Me%20(Audio).webp",
         "author": "Eminem",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "The Real Slim Shady",
@@ -51,7 +56,8 @@
         "path": "https://cdn.hackclub.com/01a0e1bd-f47c-7dcf-a136-959e8cfe531c/The%20Real%20Slim%20Shady.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bd-7bca-7fd4-ac42-fe25c0e3357a/The%20Real%20Slim%20Shady.webp",
         "author": "Eminem",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "Stan",
@@ -78,7 +84,8 @@
         "path": "https://cdn.hackclub.com/01a0e1bd-c6ed-7cec-8ae0-10ce1a27d739/Lose%20Yourself%20(From%20%EF%BC%888%20Mile%EF%BC%82%20Soundtrack).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bd-8129-79de-a044-e6216fcf8620/Lose%20Yourself%20(From%20%EF%BC%888%20Mile%EF%BC%82%20Soundtrack).webp",
         "author": "Eminem",
-        "genre": "lazy'"
+        "genre": "lazy'",
+        "popular" : "true"
     },
     {
         "name": "Bones",
@@ -114,7 +121,8 @@
         "path": "https://cdn.hackclub.com/01a0e1bc-ea14-796e-9b46-33387b1af81b/Imagine%20Dragons%20-%20Radioactive%20(Lyric%20Video).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bc-950d-790d-8e0a-90dbca6385f9/Imagine%20Dragons%20-%20Radioactive%20(Lyric%20Video).webp",
         "author": "Imagine Dragons",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "Believer",
@@ -123,7 +131,8 @@
         "path": "https://cdn.hackclub.com/01a0e1bc-df78-7235-b0f8-674404997578/Imagine%20Dragons%20-%20Believer%20(Audio).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bc-9897-7fbf-8f8f-8d4dcd95f717/Imagine%20Dragons%20-%20Believer%20(Audio).webp",
         "author": "Imagine Dragons",
-        "genre": "lapse"
+        "genre": "lapse",
+        "popular" : "true"
     },
     {
         "name": "Demons",
@@ -132,7 +141,8 @@
         "path": "https://cdn.hackclub.com/01a0e1bc-db33-7b0c-b8f2-0c624b55f189/Imagine%20Dragons%20-%20Demons%20(Lyric%20Video).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bc-96ce-7802-87b7-3986b1c8a8b1/Imagine%20Dragons%20-%20Demons%20(Lyric%20Video).webp",
         "author": "Imagine Dragons",
-        "genre": "freshing"
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
         "name": "AAKHAKO BATO",
@@ -140,8 +150,9 @@
         "num": "16",
         "path": "https://cdn.hackclub.com/01a0e1bc-2b6d-714a-aa87-de98f48a4807/B-8EIGHT%20-%20AAKHAKO%20BATO%20(OFFICIAL%20HD).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bb-ada2-75dd-a3f9-c87696ca7a2f/B-8EIGHT%20-%20AAKHAKO%20BATO%20(OFFICIAL%20HD).webp",
-        "author": "nepali",
-        "genre": "freshing"
+        "author": "Nepali",
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
         "name": "Maski Maski",
@@ -149,8 +160,9 @@
         "num": "17",
         "path": "https://cdn.hackclub.com/01a0e1bc-2896-708f-a7eb-970f64af40b2/Maski%20Maski.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bb-abfc-76b0-a2a2-4c81d8a42801/Maski%20Maski.webp",
-        "author": "nepali",
-        "genre": "lazy"
+        "author": "Nepali",
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "K Yo Maya Ho",
@@ -158,8 +170,9 @@
         "num": "18",
         "path": "https://cdn.hackclub.com/01a0e1bc-1f47-75ad-b782-706623a07a3b/B-8EIGHT%20-%20K%20Yo%20Maya%20Ho%20%5BOFFICIAL%20VIDEO%5D.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bb-a9e0-7b00-a96f-aeed2ae436ee/K%20Yo%20Maya%20Ho.webp",
-        "author": "nepali",
-        "genre": "freshing"
+        "author": "Nepali",
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
         "name": "Firfirey",
@@ -186,16 +199,18 @@
         "path": "https://cdn.hackclub.com/01a0e1b8-3947-7189-acda-465aebd1d516/Yabesh%20Thapa%20-%20Alapatra%20%E2%A7%B8%20%E0%A4%85%E0%A4%B2%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1b7-228c-7412-982d-7b2b7ba0ff66/Yabesh%20Thapa%20-%20Alapatra%20%E2%A7%B8%20%E0%A4%85%E0%A4%B2%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0.webp",
         "author": "Yabesh Thapa",
-        "genre": "freshing"
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
-        "name": "Ae Mutu, feat Zeroo",
+        "name": "Ae Mutu",
         "famous_lyric": "Ae mutu, kina",
         "num": "22",
         "path": "https://cdn.hackclub.com/01a0e1b7-dca7-712d-94c7-482e423a2e0d/Yabesh%20Thapa%20-%20Ae%20Mutu,%20feat%20Zeroo.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1b7-247c-79df-afb4-9bb0ddaf866c/Yabesh%20Thapa%20-%20Ae%20Mutu,%20feat%20Zeroo.webp",
         "author": "Yabesh Thapa",
-        "genre": "freshing"
+        "genre": "freshing",
+        "popular" : "true"
     },
     {
         "name": "Aakhale",
@@ -213,7 +228,8 @@
         "path": "https://cdn.hackclub.com/01a0e1b6-c5de-7613-b13e-9c5b73897542/HUMBLE.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1b3-d86d-791f-9ed5-dc651e1beaeb/HUMBLE..webp",
         "author": "Kendrick Lamar",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "All the Stars",
@@ -231,7 +247,8 @@
         "path": "https://cdn.hackclub.com/01a0e1b6-3a67-7ed3-86a7-9d0526a62f67/Not%20Like%20Us.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1b3-d4db-74ab-92d9-bd13a1123b5b/Not%20Like%20Us.webp",
         "author": "Kendrick Lamar",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "Money Trees",
@@ -240,7 +257,8 @@
         "path": "https://cdn.hackclub.com/01a0e1b6-2e72-75a6-9bf0-3afff1a2f205/Money%20Trees.mp3",
         "cover": "https://cdn.hackclub.com/01a0e1b3-d321-77bf-b2c2-e7e21f546534/Money%20Trees.webp",
         "author": "Kendrick Lamar",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "LOYALTY",
@@ -294,7 +312,8 @@
         "path": "https://cdn.hackclub.com/01a0e1ad-115a-715a-860a-6c6ea911302f/Lana%20Del%20Rey%20-%20Born%20To%20Die%20(Official%20Audio).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1ac-3984-7cb0-bc0c-47387ffac7c5/Lana%20Del%20Rey%20-%20Born%20To%20Die%20(Official%20Audio).webp",
         "author": "Lana Del Rey",
-        "genre": "lapse"
+        "genre": "lapse",
+        "popular" : "true"
     },
     {
         "name": "Blue Jeans",
@@ -312,7 +331,9 @@
         "path": "https://cdn.hackclub.com/01a0e1ac-cc52-74e7-90e2-113cd77d7790/Lana%20Del%20Rey%20-%20Young%20and%20Beautiful%20(from%20%EF%BC%82The%20Great%20Gatsby%EF%BC%82%20Soundtrack).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1ac-3b5d-7ec2-b2a6-06fe7049f0e3/Lana%20Del%20Rey%20-%20Young%20and%20Beautiful%20(from%20%EF%BC%82The%20Great%20Gatsby%EF%BC%82%20Soundtrack).webp",
         "author": "Lana Del Rey",
-        "genre": "lapse"
+        "genre": "lapse",
+        "popular" : "true"
+        
     },
     {
         "name": "Summertime Sadness",
@@ -321,7 +342,8 @@
         "path": "https://cdn.hackclub.com/01a0e1ac-953b-7698-91ef-dc0e3ace5c56/Lana%20Del%20Rey%20-%20Summertime%20Sadness%20(Lyrics).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1ac-2ff2-743b-b73b-b7c9ffbc6ab5/Lana%20Del%20Rey%20-%20Summertime%20Sadness%20(Lyrics).webp",
         "author": "Lana Del Rey",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "Snap Out Of It",
@@ -366,7 +388,8 @@
         "path": "https://cdn.hackclub.com/01a0e19d-c692-7604-9402-085ff5768ee2/R%20U%20Mine%EF%BC%9F.mp3",
         "cover": "https://cdn.hackclub.com/01a0de6c-ef36-70fd-8c0f-b80521db14e1/R%20U%20Mine%EF%BC%9F.webp",
         "author": "Arctic Monkeys",
-        "genre": "lazy"
+        "genre": "lazy",
+        "popular" : "true"
     },
     {
         "name": "Do I Wanna Know?",
@@ -375,6 +398,7 @@
         "path": "https://cdn.hackclub.com/01a0e197-5baf-7d26-9176-e4c91814947f/Arctic%20Monkeys%20-%20Do%20I%20Wanna%20Know%EF%BC%9F%20(Official%20Video).mp3",
         "cover": "https://cdn.hackclub.com/01a0de6c-ed58-7283-b767-dbcec679a704/Arctic%20Monkeys%20-%20Do%20I%20Wanna%20Know%EF%BC%9F%20(Official%20Video).webp",
         "author": "Arctic Monkeys",
-        "genre": "freshing"
+        "genre": "freshing",
+        "popular" : "true"
     }
 ]

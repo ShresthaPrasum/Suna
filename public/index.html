@@ -351,6 +351,30 @@
             opacity: 1;
         }
 
+        .scroll-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .scroll-btn:disabled {
+            background-color: rgba(255, 255, 255, 0.1);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
     </style>
 <body>
     <header>
@@ -426,13 +450,14 @@
                             </div>  
                         </li>
                     
-                        <li class = "singer" data-singer="nepali">
+                        <li class = "singer" data-singer="Nepali">
                             <img src="Image/Cover/nepal-flag.webp" alt="nepali songs">
                             <div class="description">
                                 <h4>Nepali Songs</h4>
                                 <p class="bg-grey">Nepali</p>
                             </div>
                         </li>
+
                         <li class = "singer" data-singer="Imagine Dragons">
                             <img src="Image/Cover/imagine-dragon.jpg" alt="Imagine Dragons">
                             <div class="description">
@@ -457,15 +482,27 @@
                     <h4 class="grey-btn">Poadcasts</h4>
                 </div>
                 <div id="recommended" class="flex">
-                    <h3>Recommended</h3>
+                    <div class="recommend flex item-center justify-space">
+                        <h3>Recommended</h3>
+                        <div class="scroll flex item-center justify-space">
+                                <button class="scroll-btn" id="leftBtn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="scroll-btn" id="rightBtn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                    </div>
                     <div class="musics" id="music-container">
                         
                     </div>
                     
                 </div>
                 <div id="recommended" class="flex">
-                    <h3>Popular Songs</h3>
-                    <div class="musics" id="music-container">
+                    <div class="recommend flex item-center justify-space"> 
+                        <h3>Popular Songs</h3>
+                        <div class="scroll flex item-center justify-space">
+                                <button class="scroll-btn" id="leftBtn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="scroll-btn" id="rightBtn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="musics" id="popular-songs">
             
                     </div>
                     
