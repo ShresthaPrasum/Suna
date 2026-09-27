@@ -14,11 +14,12 @@
         "num": "2",
         "path": "https://cdn.hackclub.com/01a0e19e-e116-7d17-9094-5a6f26d8b7d1/Arctic%20Monkeys%20-%20505.mp3",
         "cover": "https://cdn.hackclub.com/01a0dd34-02b9-707f-91be-d35e2cac2666/arctic-monkey.webp",
-        "author": "arctic-monkey",
+        "author": "Arctic Monkeys",
         "genre": "lazy"
     },
     {
         "name": "kasari",
+        "famous_lyric": "",
         "num": "3",
         "path": "",
         "cover": "",
@@ -27,6 +28,7 @@
     },
     {
         "name": "Rap God",
+        "famous_lyric": "",
         "num": "4",
         "path": "https://cdn.hackclub.com/01a0e1be-1486-720d-92d4-6cbf85b4a7a8/Eminem%20-%20Rap%20God%20(Audio).mp3",
         "cover": "https://cdn.hackclub.com/01a0e1bd-7802-76d5-b7e9-3095ce41b4af/Eminem%20-%20Rap%20God%20(Audio).webp",
@@ -35,6 +37,7 @@
     },
     {
         "name": "Without Me",
+        "famous_lyric": "",
         "num": "5",
         "path": "",
         "cover":"",
@@ -43,6 +46,7 @@
     },
     {
         "name": "The Real Slim Shady",
+        "famous_lyric": "",
         "num": "6",
         "path": "",
         "cover": "",
@@ -51,6 +55,7 @@
     },
     {
         "name": "Stan",
+        "famous_lyric": "",
         "num": "7",
         "path": "",
         "cover": "",
@@ -59,6 +64,7 @@
     },
     {
         "name": "Not Afraid",
+        "famous_lyric": "",
         "num": "8",
         "path": "",
         "cover": "",
@@ -67,6 +73,7 @@
     },
     {
         "name": "Lose Yourself",
+        "famous_lyric": "",
         "num": "9",
         "path": "",
         "cover": "",
@@ -75,6 +82,7 @@
     },
     {
         "name": "Bones",
+        "famous_lyric": "",
         "num": "10",
         "path": "",
         "cover": "",
@@ -83,6 +91,7 @@
     },
     {
         "name": "Whatever It Takes",
+        "famous_lyric": "",
         "num": "11",
         "path": "",
         "cover": "",
@@ -91,6 +100,7 @@
     },
     {
         "name": "Thunder",
+        "famous_lyric": "",
         "num": "12",
         "path": "",
         "cover": "",
@@ -99,6 +109,7 @@
     },
     {
         "name": "Radioacitve",
+        "famous_lyric": "",
         "num": "13",
         "path": "",
         "cover": "",
@@ -107,6 +118,7 @@
     },
     {
         "name": "Believer",
+        "famous_lyric": "",
         "num": "14",
         "path": "",
         "cover": "",
@@ -115,6 +127,7 @@
     },
     {
         "name": "Demons",
+        "famous_lyric": "",
         "num": "15",
         "path": "",
         "cover": "",
@@ -123,6 +136,7 @@
     },
     {
         "name": "AAKHAKO BATO",
+        "famous_lyric": "",
         "num": "16",
         "path": "",
         "cover": "",
@@ -131,6 +145,7 @@
     },
     {
         "name": "Maski Maski",
+        "famous_lyric": "",
         "num": "17",
         "path": "",
         "cover": "",
@@ -139,6 +154,7 @@
     },
     {
         "name": "K Yo Maya Ho",
+        "famous_lyric": "",
         "num": "18",
         "path": "",
         "cover": "",
@@ -147,6 +163,7 @@
     },
     {
         "name": "Firfirey",
+        "famous_lyric": "",
         "num": "19",
         "path": "",
         "cover": "",
@@ -155,6 +172,7 @@
     },
     {
         "name": "Fewataal feat. DONG",
+        "famous_lyric": "",
         "num": "20",
         "path": "",
         "cover": "",
@@ -163,6 +181,7 @@
     },
     {
         "name": "Alapatra",
+        "famous_lyric": "",
         "num": "21",
         "path": "",
         "cover": "",
@@ -171,14 +190,16 @@
     },
     {
         "name": "Ae Mutu, feat Zeroo",
+        "famous_lyric": "",
         "num": "22",
         "path": "",
         "cover": "",
         "author": "Yabesh Thapa",
-        "genre": "",
+        "genre": ""
     },
     {
         "name": "Aakhale",
+        "famous_lyric": "",
         "num": "23",
         "path": "",
         "cover": "",
@@ -187,6 +208,7 @@
     },
     {
         "name": "HUMBLE",
+        "famous_lyric": "",
         "num": "24",
         "path": "",
         "cover": "",
@@ -195,6 +217,7 @@
     },
     {
         "name": "All the Stars",
+        "famous_lyric": "",
         "num": "25",
         "path": "",
         "cover": "",
@@ -203,6 +226,7 @@
     },
     {
         "name": "Not Like Us",
+        "famous_lyric": "",
         "num": "26",
         "path": "",
         "cover": "",
@@ -211,6 +235,7 @@
     },
     {
         "name": "Money Trees",
+        "famous_lyric": "",
         "num": "27",
         "path": "",
         "cover": "",
@@ -219,6 +244,7 @@
     },
     {
         "name": "LOYALTY",
+        "famous_lyric": "",
         "num": "28",
         "path": "",
         "cover": "",
@@ -227,6 +253,7 @@
     },
     {
         "name": "peekaboo",
+        "famous_lyric": "",
         "num": "29",
         "path": "",
         "cove": "",
@@ -235,6 +262,7 @@
     },
     {
         "name": "West Coast",
+        "famous_lyric": "",
         "num": "30",
         "path": "",
         "cover": "",
@@ -242,6 +270,111 @@
         "genre": ""
     },
     {
-
+        "name": "Lust for life",
+        "famous_lyric": "",
+        "num": "31",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Say Yes To Heaven",
+        "famous_lyric": "",
+        "num": "32",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Born To Die",
+        "famous_lyric": "",
+        "num": "33",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Blue Jeans",
+        "famous_lyric": "",
+        "num": "34",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Young and Beautiful",
+        "famous_lyric": "",
+        "num": "35",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Summertime Sadness",
+        "famous_lyric": "",
+        "num": "36",
+        "path": "",
+        "cover": "",
+        "author": "Lana Del Rey",
+        "genre": ""
+    },
+    {
+        "name": "Snap Out Of It",
+        "famous_lyric": "",
+        "num": "37",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
+    },
+    {
+        "name": "Arabella",
+        "famous_lyric": "",
+        "num": "38",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
+    },
+    {
+        "name": "No. 1 Party Anthem",
+        "famous_lyric": "",
+        "num": "39",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
+    },
+    {
+        "name": "Knee Socks",
+        "famous_lyric": "",
+        "num": "40",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
+    },
+    {
+        "name": "R U Mine?",
+        "famous_lyric": "",
+        "num": "41",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
+    },
+    {
+        "name": "Do I Wanna Know?",
+        "famous_lyric": "",
+        "num": "42",
+        "path": "",
+        "cover": "",
+        "author": "Arctic Monkeys",
+        "genre": ""
     }
 ]
