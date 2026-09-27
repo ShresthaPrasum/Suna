@@ -1,3 +1,6 @@
+let currentAudio = null;
+let selectedsong = null;
+let points = 0;
 document.addEventListener("DOMContentLoaded", () => {
   const formbtn = document.querySelector("#generatebtn");
   const form = document.querySelector("#form");
@@ -144,6 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hit.addEventListener('submit', (e)=>{
         e.preventDefault();
+        if(currentAudio){
+            currentAudio.pause();
+            currentAudio.src = "";
+        }
         const formdataa = new FormData(hit);
         const difficulty = formdataa.get('diff');
         console.log(difficulty);
@@ -167,13 +174,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     where = 'end';
                 }
                 
-                const selected_song = result.song;
-                const song_play = await fetch(selected_song.path);
+                selectedsong = result.song;
+                const song_play = await fetch(selectedsong.path);
                 const blob = await song_play.blob();
                 const url = URL.createObjectURL(blob);
                 const audio = new Audio(url);
                 let stop;
                 audio.play();
+                document.querySelector('#guessed-song').style.display = "flex";
 
                 audio.addEventListener('loadeddata', ()=>{
                     const duration = audio.duration;
@@ -202,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             URL.revokeObjectURL(url);
                         }, durationn * 1000);
                     })
+                   
                       document.querySelector('#play_again').addEventListener('click', (e)=>{
                     e.preventDefault();
                     document.querySelector('#play_again').disabled = true;
@@ -226,8 +235,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     e.preventDefault();
                     document.querySelector('#play_again').disabled = true;
                 })
-
+                
             }
         })
     })
 });
+document.querySelector('#guessed-song').addEventListener('keydown', (event)=>{
+                    if(event.key === 'Enter'){
+                        const valuee = document.querySelector('#guessed-song').value;
+                        const realans = selectedsong.name;
+                        if(valuee.toLowerCase() === realans.toLowerCase()){
+                            alert(`YOU GUESSED IT!!!!!!! +250 points`);
+                            points = points + 250;
+                            alert(`You are at ${points} points right now!`);
+                        }else{
+                            alert(`WRONG!, It was ${realans.toLowerCase()}`);
+                            return;
+                        }
+                    }
+                })
+                

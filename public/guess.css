@@ -83,7 +83,7 @@ button{
     display: none;
     margin-top: 20px;
 }
-#guess_output{
+#guess_output, #guessed-song{
     width: 150px;
     height: 30px;
     border: none;
@@ -131,4 +131,8 @@ a{
 .play{
     height: 26px;
     width: 26px;
+}
+#guessed-song{
+    margin-top: 20px;
+    display: none;
 }
