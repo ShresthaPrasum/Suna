@@ -57,7 +57,13 @@ app.post('/savee', (req,res)=>{
 
 app.post('/hit', (req,res)=>{
     const difficulty = req.body.diff;
-    console.log(difficulty);
+    const randomm = Math.floor(Math.random()* song_data.length);
+    console.log(randomm)
+    const random_song = song_data[randomm];
+    res.json({
+        success:true,
+        song: random_song
+    });
 })
 
 app.listen(port, ()=>{

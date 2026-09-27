@@ -156,8 +156,36 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
         .then(response=>response.json())
-        .then(result=>{
-            
+        .then(async (result)=>{
+            let where = 'start';
+            if(difficulty==='easy'){
+                where = 'middle';
+            }else if(difficulty==='medium'){
+
+            }
+            if(result.success){
+                const selected_song = result.song;
+                const song_play = await fetch(selected_song.path);
+                const blob = await song_play.blob();
+                const url = URL.createObjectURL(blob);
+                const audio = new Audio(url);
+                audio.play();
+
+                audio.addEventListener('loadeddata', ()=>{
+                    const duration = audio.duration;
+                    console.log(duration);
+                    const random_start = Math.random()* duration;
+                    const durationn =5;
+                    audio.currentTime = random_start;
+                    audio.play().then(()=>{
+                        setTimeout(() => {
+                            audio.pause();
+                            URL.revokeObjectURL(url);
+                        }, durationn * 1000);
+                    })
+                })
+
+            }
         })
     })
 });
