@@ -38,6 +38,6 @@
 <hr>
 
 ## Live Demo:
-You can use Suna from [this link.](https://inprogress.vercel.app)
+You can use Suna from [this link.](https://suna-kw55.onrender.com/)
 
 <hr>
